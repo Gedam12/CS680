@@ -32,3 +32,4 @@ public class Calculator {
         System.out.println( calc.multiply(2, 3) );
         System.out.println( calc.divide(10, 2) );
 }
+}
