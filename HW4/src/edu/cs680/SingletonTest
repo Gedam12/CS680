@@ -1,0 +1,31 @@
+package edu.umb.cs680.hw4; 
+
+import static org.testng.Assert.assertEquals;
+public class SingletonTest
+  {
+    public static void main(String[] args) throws Exception
+      {
+        System.out.println("SingletonTest () invoked !");
+        Singleton instance1 = Singleton.getInstance();
+            // As we compare the obect instantiation time -  a short sleep 
+            // should return a different itime if we have no singleton object !
+        Thread.sleep(1000);
+        Singleton instance2 = Singleton .getInstance();
+            
+        System.out.println("Checking singleton objects equality");
+        assertEquals(instance1,instance2, "Objects are NOT equal !");
+        System.out.println("Our UCP classes are equal: " + 
+               "- instance2.itime: "  + instance1.itime    + 
+               " - instance2.itime: "  + instance2.itime );
+        System.out.println("Testing  string equality - No assertion expected");
+        String s1 = "s1";
+        String s2 = "s1";
+        assertEquals(s1,s2, "Strings are NOT equal !");
+        System.out.println("Here we are - strings are equal : s1 == s2");
+        
+        System.out.println("Testing  string equality - now firing java.lang.AssertionError");
+        s2 = s2 + "s2";
+        assertEquals(s1,s2, "String Objects are NOT equal - Assertion !");
+        System.out.println("This line will be never reached");      
+      }  
+  }
