@@ -13,8 +13,8 @@ class MileageComparatorTest {
 
     @Test
     void car1Check() {
-        Car car1 = new Car("BMW", "X3", 2014, 23, 80000);
-        Car car2 = new Car("Mercedes", "C300", 2013, 20, 95000);
+        Car car1 = new Car("Audi", "XL", 2005, 43, 12000);
+        Car car2 = new Car("BMW", "X3", 2004, 40, 22000);
         carList.add(car1);
         carList.add(car2);
         Collections.sort(carList,(Car car0, Car car01) -> car01.getMileage()-car0.getMileage());
