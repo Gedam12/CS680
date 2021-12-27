@@ -15,8 +15,8 @@ class MileageComparatorTest {
 	
 	@BeforeAll
 	public static void initialize() {
-		Car c1 = new Car("Audi", "Q7", 2015, 50000, 90000);
-		Car c2 = new Car("BMW", "M-Series", 2018, 30000, 55000);
+		Car c1 = new Car("Audi", "XL", 2005, 50000, 90000);
+		Car c2 = new Car("BMW", "M-Series", 2004, 30000, 55000);
 		cars.add(c1);
 		cars.add(c2);
 		Collections.sort(cars,(Car arg0, Car arg1) -> arg1.getMileage()-arg0.getMileage());
@@ -30,9 +30,9 @@ class MileageComparatorTest {
 	}
 	
 	@Test
-	void testforcar3() {
-		Car c3 = new Car("BMW", "M-Series", 2018, 30000, 55000);
-		assertEquals(c3, cars.get(2));
+	void testforcar2() {
+		Car c2 = new Car("BMW", "M-Series", 2018, 30000, 55000);
+		assertEquals(c2, cars.get(1));
 	}	
 
 }
