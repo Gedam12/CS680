@@ -29,10 +29,10 @@ collection.sort(
         else
             return car1.getPrice().value() - car2.getPrice().value();
     }      
-collection.sort(
+collection.sort(carList, (
     Comparator.comparing(Car::getPrice)
-        .thenComparing(Comparator.comparing(Car::setPrice)));
-collection.sort(
+        .thenComparing(Comparator.comparing(Car::setPrice))));
+collection.sort(carList, (
     Comparator.comparing(Car::getPrice)
         .reversed()
-        .thenComparing(Comparator.comparing(Car::Price)));
+        .thenComparing(Comparator.comparing(Car::Price))));
